@@ -7,30 +7,38 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body {
+  min-width: 960px;
+  min-height: 720px;
+}
 
 .container{
-  width: 100%;
+  width: 100vw;
+  min-width: 1080px;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('colombo.jfif');
+  min-height: 720px;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(data/Turismo/colombo.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .row{
-
   display: flex;
   height: 88%;
   align-items: center;
   margin-left: 110px;
+  justify-content: center;
 }
 
 .col{
-  flex-basis: 50%;
+  width: 50%;
+  
 }
 
 h1{
 color: white;
 font-size: 100px;
+text-shadow: 2px 2px 4px #000000;;
 }
 
 p{
@@ -38,12 +46,20 @@ p{
   font-size: 15px;
   line-height: 18px;
   text-align: justify;
+  text-shadow: 2px 2px 4px #000000;
 }
 
+/* adiciona indentação no textinho, paragrafo na primeira linha */
+p:first-of-type {
+  text-indent: 2em;
+}
+
+
 button{
-  width: 180px;
+  width: 200px;
+  height: 45px;
   color: rgb(0, 0, 0);
-  font-size: 12px;
+  font-size: 18px;
   padding: 12px 0;
   background: white;
   border: 0;
@@ -52,6 +68,7 @@ button{
   margin-top: 30px ;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 button:hover{
@@ -74,33 +91,17 @@ background-color: rgb(210, 210, 25);
   font-weight:900 ;
   font-size: 1.5em;
   text-transform: uppercase;
-  color: black;
 }
 
 
+.tituloCard{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 
-.card1{background-image: url(parque-municipal-da-uva.jpg)
-}
-
-.card2{background-image: url(museu.jpg);
-}
-
-.card3{background-image: url(gruta-do-bacaetava.jpg);
-}
-
-.card4{background-image: url(morro\ da\ cruz.jpg);
-}
-
-.card5{background-image: url(igreja3.jfif);
-}
-
-
-.card6{
-  background-image: url(park.jpg);
 }
 
 .card:hover{
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
 
 a{ 
@@ -109,3 +110,4 @@ outline: none;
 border: none;
 text-decoration: none;
 }
+
